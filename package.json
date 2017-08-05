@@ -1,27 +1,28 @@
 {
-  "name"             : "mongod-run",
+  "name"             : "mongod-run2",
   "version"          : "0.1.0",
   "description"      : "Runs mongod. Useful when testing APIs.",
   "main"             : "mongod.run.js",
   "repository"       : {
-  "type"             : "git",
-  "url"              : "git://github.com/gtramontina/mongod-run.git"
+    "type"             : "git",
+    "url"              : "git://github.com/clcrum/mongod-run2.git"
   },
   "keywords"         : [
     "mongodb",
     "mongod",
     "run",
-    "test"
+    "mean",
+    "express"
   ],
-  "author"           : "Guilherme Tramontina <guilherme.tramontina@gmail.com>",
+  "author"           : "Chris Crum",
   "license"          : "Unlicense",
   "bugs"             : {
-  "url"              : "https://github.com/gtramontina/mongod-run/issues"
+    "url"              : "https://github.com/clcrum/mongod-run2/issues"
   },
-  "homepage"         : "https://github.com/gtramontina/mongod-run",
+  "homepage"         : "https://github.com/clcrum/mongod-run2",
   "dependencies"     : {
-  "temp"             : "^0.7.0",
-  "database-cleaner" : "^0.7.0",
-  "shelljs"          : "^0.2.6"
+    "temp"             : "^0.8.3",
+    "database-cleaner" : "^0.7.0",
+    "shelljs"          : "^0.7.8"
   }
 }

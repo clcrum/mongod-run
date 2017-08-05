@@ -26,7 +26,8 @@ function run () {
     checkRunning = noop;
     notifyListeners();
   };
-  mongod = s.exec('mongod -f . --dbpath='+tmp()+' --rest', { async: true, silent: true });
+  //mongod = s.exec('mongod -f . --dbpath='+tmp()+' --rest', { async: true, silent: true });
+  mongod = s.exec('mongod --rest', { async: true, silent: true });
   mongod.stdout.on('data', checkRunning);
 }
 

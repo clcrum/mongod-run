@@ -7,6 +7,14 @@ lib-cov
 *.pid
 *.gz
 
+.idea/
+.sass-cache/
+.tmp/
+.versions/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
 .editorconfig
 
 pids

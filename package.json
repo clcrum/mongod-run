@@ -1,6 +1,6 @@
 {
   "name"             : "mongod-run2",
-  "version"          : "0.1.0",
+  "version"          : "0.1.1",
   "description"      : "Runs mongod. Useful when testing APIs.",
   "main"             : "mongod.run.js",
   "repository"       : {

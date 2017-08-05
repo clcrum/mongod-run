@@ -1,11 +1,24 @@
-# mongod-run
-Runs mongod. Useful when testing APIs.
+# mongod-run2
+Simplifies running mongod within MEAN / Express projects. It can also be useful when testing APIs.
 
-## Motivation
-When running tests for APIs that are backed by a database, we usually either have the DB up as a service somewhere or do this extra step of bringing it up before running the tests. I didn't want to do any of these, so I wrote `mongod-run`.
+This is a fork of [gtramontina/mongod-run](https://github.com/gtramontina/mongod-run) where all the real work was done. Unfortunately, there were some changes in Node 7.x that broke the original package.
 
-## Example
-___Note___: _I focused mainly on getting it working with [mocha](http://visionmedia.github.io/mocha/), as this is what I've been testing with._
+## Express Example
+
+```javascript
+var mongodRun2 = require('mongod-run2');
+
+if(!isProduction) {
+  mongodRun2.start(() => {
+    this.doAfterMongoStart();
+  })
+}
+else {
+  this.doAfterMongoStart();
+}
+```
+
+## Testing Example
 
 ```javascript
 var mongod = require('mongod-run');
@@ -27,11 +40,8 @@ describe('my app', function () {
 ## Notes
 The `mongod` process is being ran with the following command:
 ```bash
-mongod -f . --dbpath=<temp_directory> --rest
+$ mongod -f --rest
 ```
-The temporary directory is removed at the end – either via .stop() or process exit.
 
-_I have the feeling that customizing this command line might be something that people might want to do. If so, feel free to submit a pull request!_
-
-# License
+## License
 This is licensed under the feel-free-to-do-whatever-you-want-to-do license – [http://unlicense.org](http://unlicense.org)
